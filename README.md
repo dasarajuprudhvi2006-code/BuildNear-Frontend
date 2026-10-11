@@ -1,16 +1,45 @@
-# React + Vite
+# BuildNear - Frontend Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+High-performance, modern Single-Page Application (SPA) for **BuildNear** (Local Construction & Interior Services Marketplace).
 
-Currently, two official plugins are available:
+## Tech Stack
+- **Framework:** React 19 + Vite 8
+- **Routing:** React Router v7
+- **Styling:** Custom Modular CSS Architecture (`index.css`)
+- **HTTP Client:** Axios with JWT request/response interceptors
+- **Icons:** Lucide React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
+- **Dynamic Geo-Location Hubs:** GPS detection + 35 Indian state/city hubs.
+- **Search & Filter:** Trades (Electrician, Plumber, Mason, Architect, etc.), rating, price, experience, and keywords (Vastu, AAC blocks, 3-phase, etc.).
+- **Interactive Modules:** Direct booking, quotation requests & comparisons, transparent estimation calculators.
+- **Role Dashboards:** Dedicated workspaces for Customers, Professionals, and Administrators.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Deployment on Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This repository is optimized for one-click deployment on [Vercel](https://vercel.com):
+
+1. **Import Project:** Select `BuildNear-Frontend` from your GitHub account.
+2. **Framework Preset:** Vite
+3. **Build Command:** `npm run build`
+4. **Output Directory:** `dist`
+5. **Environment Variables:**
+   - `VITE_API_BASE_URL`: `https://<your-backend-url>/api` (or `/api` when proxying)
+6. **SPA Routing:** Configured in `vercel.json` to prevent 404s on route refresh.
+
+---
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+Accessible at `http://localhost:5173`.
